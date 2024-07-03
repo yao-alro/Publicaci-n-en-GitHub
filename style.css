@@ -1,0 +1,293 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+
+/* Encabezado */
+header {
+  position: absolute; 
+  top: 10px;
+  left: 160px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8); 
+  padding: 10px;
+  z-index: 1000;
+  border-radius: 70px;
+  
+}
+
+header nav a {
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+#titulo {
+  font-size: 20px; 
+  color: black;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+/* Fondo */
+#inicio {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  background-image: url("imagenes/fondo2.jpg"); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+}
+
+
+#inicio::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to top, #111, transparent);
+  z-index: 1;
+}
+
+section .contenedor{
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;        
+  flex-direction: column;
+  margin: 20px;
+  top: 40%;                      
+  left: 50%;                   
+  transform: translateX(-50%) ;
+  text-align: center;
+ 
+}
+section .contenedor h2{
+  font-size: 4em;
+  color: #fff;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+section .contenedor p{
+  font-size: 1.5em;
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.btn{
+  position: relative;
+  display: inline-block;
+  margin-top: 30px;
+  background: #fff;
+  color: #333;
+  text-decoration: none;
+  padding: 10px 30px;
+  border-radius: 10px;
+  
+}
+
+h2:hover span{
+  color: white;
+  text-shadow: 
+    0 0 10px white,
+    0 0 20px #FADCE4,
+    0 0 40px white,
+    0 0 80px #FADCE4,
+    0 0 160px red;
+
+  transition: 1.5s;
+}
+
+/* About Us */
+article {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 35px;
+  background-image: url("imagenes/fondo\ azul.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; 
+  height: 100vh;
+}
+
+article .contentBox, article .imgBox {
+  flex: 1;
+  padding: 20px;
+}
+
+article .imgBox img {
+  width: 90%;
+  border-radius: 15px;  
+}
+
+#transX:hover{
+  transform: translate(60px, 30px);
+  background-color: white;
+  transition: transform 1s
+}
+
+.titleText2:hover span{
+  color: white;
+  text-shadow: 
+    0 0 10px white,
+    0 0 20px #A2AEC6,
+    0 0 40px white,
+    0 0 80px #A2AEC6,
+    0 0 160px #0498C8;
+
+  transition: 1.5s;
+}
+
+.titleText2 {
+  font-weight: 600;
+  font-size: 4em;
+  margin-bottom: 10px;
+  color: black;
+  cursor: pointer;
+}
+
+p {
+  font-size: 1.7em;
+}
+
+/* Productos */
+main {
+  position: relative;
+  background-image: url("imagenes/fondo\ rosa.jpg"); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; 
+  padding: 40px;
+}
+
+main .content {
+  text-align: center;
+}
+
+main .productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.productos .box {
+  position: relative;
+  width: 300px;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.productos .imgBx img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.productos .content {
+  padding: 20px;
+}
+
+.productos h3 {
+  font-size: 1.5em;
+  margin: 10px ;
+}
+
+.productos span {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.titleText3:hover span{
+  color: white;
+  text-shadow: 
+    0 0 10px white,
+    0 0 20px #FADCE4,
+    0 0 40px white,
+    0 0 80px #FADCE4,
+    0 0 160px red;
+
+  transition: 1.5s;
+}
+
+.titleText3 {
+  font-weight: 600;
+  font-size: 4em;
+  margin-bottom: 10px;
+  color: black;
+  cursor: pointer;
+}
+
+.productos .btn {
+  position: relative;
+  display: inline-block;
+  margin-top: 30px;
+  background: #fff;
+  color: red;
+  text-decoration: none;
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+
+.productos .btn:hover {
+  background: #FADCE4;
+}
+
+.productos:hover .box {
+  opacity: 0.3;
+  transform: scale(1);
+}
+
+.productos .box:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+}
+footer .rrss{
+  position: relative;
+  display: flex;
+  right: 40px;
+}
+
+footer .rrss li{
+  list-style: none;
+}
+
+footer .rrss li a img{
+  margin: 10px;
+  width: 25px;
+}
+
+/* Tipografia */
+body{
+  font-family: "Quicksand", sans-serif;
+}
+
